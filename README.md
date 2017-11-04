@@ -7,7 +7,7 @@ This code calculates stoppages using time series data of latitude and langitude 
 Required input format:
 User[String]\tSession[String]\tTimestamp[yyyy-mm-dd hh:mm:ss]\tlatitude[double]\tlongitude[double]
 
-The code first sorts data by timestamp. We use density based clustering (DBSCAN) as that allowa us to handle noise in the data.
+The code first sorts data by timestamp. We use density based clustering (DBSCAN) as that allows us to handle noise in the data.
 
 ## Likely Clusters
 
