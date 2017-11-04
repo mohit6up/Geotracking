@@ -11,7 +11,7 @@ User[String]\tSession[String]\tTimestamp[yyyy-mm-dd hh:mm:ss]\tlatitude[double]\
 """
 
     KMS_IN_RADIANS = 6371.0088
-    INSTALL_ID = 'xxx'
+    USER_ID = 'xxx'
 
     def __init__(self, file_path):
         df = DataFrame.from_csv(file_path, sep="\t")
@@ -150,7 +150,7 @@ User[String]\tSession[String]\tTimestamp[yyyy-mm-dd hh:mm:ss]\tlatitude[double]\
             from_center = [ self.haversine(df.iloc[i]['lng'], df.iloc[i]['lat'], centers[df.iloc[i]['cluster']][1], \
                 centers[df.iloc[i]['cluster']][0]) for i in range(start_index, end_index)]
             index = from_center.index(min(from_center))
-            result.append((self.INSTALL_ID, df.iloc[start_index]['time'], df.iloc[end_index]['time'], \
+            result.append((self.USER_ID, df.iloc[start_index]['time'], df.iloc[end_index]['time'], \
                 df.iloc[start_index + index]['lat'], df.iloc[start_index + index]['lng']))
         return result
 
