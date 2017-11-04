@@ -4,8 +4,10 @@ Stop Detection on Time Series Coordinate Data
 This code calculates stoppages using time series data of latitude and langitude coordinates. It needs to be specialized for specific use cases.
 
 ## Preparation
+Required input format:
+User[String]\tSession[String]\tTimestamp[yyyy-mm-dd hh:mm:ss]\tlatitude[double]\tlongitude[double]
 
-The code first sorts data by timestamp. We use density based clustering (DBSCAN) as that would allow us to handle noise in the data.
+The code first sorts data by timestamp. We use density based clustering (DBSCAN) as that allowa us to handle noise in the data.
 
 ## Likely Clusters
 
